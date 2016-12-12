@@ -15,5 +15,5 @@ sqlite
 User 表：
 |id	|username	|role_id	|email	|password_hash	|confirmed	|about_me	|last_seen	|location	|member_since	|name	|avatar_hash	|
 |-----|:-------:|:------:|:-------:|:--------:|:----------:|:--------:|:--------:|:-----:|:----:|
--------:|
+:-------:|---------:|
 |1	|ww0	|2	|11@qq.com	|******	|1	|good boy	|12-12	|sustc	|12-10	|zengxiaoxian	|ef233	|
