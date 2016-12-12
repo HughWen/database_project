@@ -14,5 +14,7 @@ redis 也属于Nosql，没有严禁的数据结构。其因为在启动的过程
 sqlite
 User 表：
 |id	|username	|role\_id	|email	|password_hash	|confirmed	|about_me	|last_seen	|location	|member\_since	|name	|avatar_hash|
+
 |-----	|:------:	|:-----:	|:------:	|:--------:	|:----------:	|:--------:	|:--------:	|:-----:	|:----:	|:-------:	|	---------:|
+
 |1	|ww0	|2	|11@qq.com	|******	|1	|good boy	|12-12	|sustc	|12-10	|zengxiaoxian	|ef23	|
