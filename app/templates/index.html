@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Ori{% endblock %}
+
+{% block scripts %}
+{{super()}}
+    <script type=text/javascript src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+    <script type=text/javascript>
+        $(function() {
+            $('a#calculate').bind('click',
+                    function() {
+                      $.getJSON($SCRIPT_ROOT + '/topics/_add_numbers', {
+                            a: $('input[name="a"]').val(),
+                            b:{{ current_user.role_id }}
+
+                      }, function(data) {
+                          $("#first0").text(data.result0);
+                        $("#first1").text(data.result1);
+                          $("#first2").text(data.result2);
+                          $("#first3").text(data.result3);
+                          $("#first4").text(data.result4);
+                          $("#first5").text(data.result5);
+                          $("#first6").text(data.result6);
+                          $("#first7").text(data.result7);
+                          $("#first8").text(data.result8);
+                          $("#first9").text(data.result9);
+
+                      });
+                      return false;
+                                });
+                        });
+    </script>
+{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Stranger{% endif %}!</h1>
+    {% if current_user.is_authenticated %}
+        Enter the id of the article to get some articles's topic before it.
+        <input type=text size=5 name=a>
+                <a href=# id=calculate value="cal">get the hot topics </a>
+          <h3>Hot topics</h3>
+          <li class="list-group-item" id = first0></li>
+          <li class="list-group-item" id = first1></li>
+          <li class="list-group-item" id = first2></li>
+          <li class="list-group-item" id = first3></li>
+          <li class="list-group-item" id = first4></li>
+          <li class="list-group-item" id = first5></li>
+          <li class="list-group-item" id = first6></li>
+          <li class="list-group-item" id = first7></li>
+          <li class="list-group-item" id = first8></li>
+          <li class="list-group-item" id = first9></li>
+    {% else %}
+    {% endif %}
+    {% if result %}
+        result
+    {% endif %}
+</div>
+{% endblock %}

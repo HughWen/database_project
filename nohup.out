@@ -1,0 +1,11 @@
+usage: manage.py [-h] {test,shell,db,runserver} ...
+manage.py: error: invalid choice: '0.0.0.0' (choose from 'test', 'shell', 'db', 'runserver')
+ * Running on http://127.0.0.1:27777/ (Press CTRL+C to quit)
+ * Restarting with stat
+127.0.0.1 - - [12/Dec/2016 14:55:18] "GET /topics/analysis/ HTTP/1.0" 404 -
+127.0.0.1 - - [12/Dec/2016 14:55:21] "GET /topics/analysis/ HTTP/1.0" 404 -
+127.0.0.1 - - [12/Dec/2016 14:55:23] "GET /topics/ HTTP/1.0" 200 -
+127.0.0.1 - - [12/Dec/2016 14:55:26] "GET /topics/ HTTP/1.0" 200 -
+127.0.0.1 - - [12/Dec/2016 14:55:27] "GET /topics/ HTTP/1.0" 200 -
+127.0.0.1 - - [12/Dec/2016 14:55:27] "GET /topics/ HTTP/1.0" 200 -
+127.0.0.1 - - [12/Dec/2016 15:19:12] "GET /topics/analysis/ HTTP/1.0" 404 -
