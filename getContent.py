@@ -23,7 +23,7 @@ redis_setting = {
 
 REDIS_CLIENT = StrictRedis(**redis_setting['dev'])
 
-MONGO_CLIENT = MongoClient('mongodb://nodebb:Xintuomarket008@127.0.0.1:27017/nodebb')
+MONGO_CLIENT = MongoClient('secret')
 
 db = MONGO_CLIENT['nodebb']
 articles_coll = db['articles']
